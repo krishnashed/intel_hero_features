@@ -67,7 +67,7 @@ function App() {
                     id="grid-state"
                     onChange={(e) => setSelectedModel(e.target.value)}
                   >
-                    <option>Select Model</option>
+                    <option>--Select Model--</option>
                     <option value={links.elastic_net}>Elastic Net</option>
                     <option value={links.kmeans}>Kmeans</option>
                     <option value={links.knn_mnist}>Knn Mnist</option>
@@ -104,7 +104,7 @@ function App() {
 
   return (
     <>
-      <nav class=" border-gray-200 px-2 sm:px-4 py-2.5 bg-gray-300">
+      <nav class=" border-gray-200 px-2  py-1 bg-gray-300">
         <div class="container flex flex-wrap items-center justify-between px-6 mx-auto">
           <a href="https://flowbite.com/" class="flex items-center">
             {/* <img src="#" class="h-6 mr-3 sm:h-9" /> */}
@@ -128,8 +128,8 @@ function App() {
         </div>
       </nav>
       {selectedModel ? (
-        <div className="w-full ">
-          <div className="flex justify-between h-[70vh]">
+        <div className="w-full h-[100vh]">
+          <div className="flex justify-between h-[70%] ">
             <iframe
               src="http://3.111.35.80:3000/d/rYdddlPWk/node-exporter-full?orgId=1&from=now-5m&to=now&kiosk&refresh=5s"
               frameborder="0"
@@ -146,6 +146,14 @@ function App() {
               allowtransparency
             ></iframe>
           </div>
+          <iframe
+            src="http://15.206.164.94:2222/ssh/host/15.206.164.94"
+            frameborder="0"
+            width="100%"
+            height="30%"
+            className="mt-1 hide-scroll"
+            allowTransparency
+          ></iframe>
         </div>
       ) : (
         displayModal()
