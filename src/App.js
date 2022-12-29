@@ -1,25 +1,21 @@
 import React, { useState, useEffect } from "react";
+import Split from "react-split";
 import "./App.css";
 
 function App() {
+  const [grafanaIP, setGrafanaIP] = useState("3.111.35.80");
+  const [metabaseIP, setMetabaseIP] = useState("13.232.215.175");
+  const [WebSSHIP, setWebSSHIP] = useState("15.206.178.165");
   const [links, setLinks] = useState({
-    elastic_net:
-      "http://13.232.215.175:3000/public/question/b66501cd-5054-456a-adad-1ce145d615a5",
-    kmeans:
-      "http://13.232.215.175:3000/public/question/b999b3fd-d2e5-4613-a0d5-144b734351b2",
-    knn_mnist:
-      "http://13.232.215.175:3000/public/question/9e19c0f7-85d8-42aa-a31a-e440c32aa259",
-    lasso_regression:
-      "http://13.232.215.175:3000/public/question/9596eb07-4152-480b-a370-8f325ab4c6ba",
-    linear_regression:
-      "http://13.232.215.175:3000/public/question/88ba816b-3a8f-4f76-8ad5-ac1f9a6d6bbb",
-    nusvr:
-      "http://13.232.215.175:3000/public/question/7f3bd829-e2af-4242-8a9d-bd2793dc068a",
-    ridge_regression:
-      "http://13.232.215.175:3000/public/question/315465a6-e17d-4ce9-aa07-b196220b9e27",
-    svc: "http://13.232.215.175:3000/public/question/ebc66054-4c97-4783-b489-07b1da68963b",
-    xgboost:
-      "http://13.232.215.175:3000/public/question/d4fc31d2-3f67-4e83-8410-e1aea4b27594",
+    elastic_net: `http://${metabaseIP}:3000/public/question/b66501cd-5054-456a-adad-1ce145d615a5`,
+    kmeans: `http://${metabaseIP}:3000/public/question/b999b3fd-d2e5-4613-a0d5-144b734351b2`,
+    knn_mnist: `http://${metabaseIP}:3000/public/question/9e19c0f7-85d8-42aa-a31a-e440c32aa259`,
+    lasso_regression: `http://${metabaseIP}:3000/public/question/9596eb07-4152-480b-a370-8f325ab4c6ba`,
+    linear_regression: `http://${metabaseIP}:3000/public/question/88ba816b-3a8f-4f76-8ad5-ac1f9a6d6bbb`,
+    nusvr: `http://${metabaseIP}:3000/public/question/7f3bd829-e2af-4242-8a9d-bd2793dc068a`,
+    ridge_regression: `http://${metabaseIP}:3000/public/question/315465a6-e17d-4ce9-aa07-b196220b9e27`,
+    svc: `http://${metabaseIP}:3000/public/question/ebc66054-4c97-4783-b489-07b1da68963b`,
+    xgboost: `http://${metabaseIP}:3000/public/question/d4fc31d2-3f67-4e83-8410-e1aea4b27594`,
   });
 
   const [showModal, setShowModal] = useState(true);
@@ -49,7 +45,7 @@ function App() {
               <hr />
 
               <button
-                className="px-2 my-2 text-center mx-auto rounded-md hover:bg-gray-500 w-2/3 "
+                className="px-2 py-2 hover:text-white my-2 text-center mx-auto rounded-md hover:bg-gray-500 w-2/3 "
                 type="button"
                 onClick={() => setSelectedModel(links.xgboost)}
               >
@@ -104,20 +100,19 @@ function App() {
 
   return (
     <>
-      <nav class=" border-gray-200 px-2  py-1 bg-gray-300">
+      <nav class=" border-gray-500 px-2  py-1 bg-gray-700 text-white">
         <div class="container flex flex-wrap items-center justify-between px-6 mx-auto">
-          <a href="https://flowbite.com/" class="flex items-center">
-            {/* <img src="#" class="h-6 mr-3 sm:h-9" /> */}
+          <a href="#" class="flex items-center">
             <span class="self-center font-bold text-xl font-semibold whitespace-nowrap dark:text-white">
               Optimizations
             </span>
           </a>
           <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <ul class="flex flex-col p-2  border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white  md:dark:bg-gray-900">
               <li onClick={() => setShowModal(!showModal)}>
                 <a
                   href="#"
-                  class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                  class=" p-0 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700"
                   aria-current="page"
                 >
                   Optimizations
@@ -127,34 +122,41 @@ function App() {
           </div>
         </div>
       </nav>
-      {selectedModel ? (
-        <div className="w-full h-[100vh]">
-          <div className="flex justify-between h-[70%] ">
-            <iframe
-              src="http://3.111.35.80:3000/d/rYdddlPWk/node-exporter-full?orgId=1&from=now-5m&to=now&kiosk&refresh=5s"
-              frameborder="0"
-              width="50%"
-              // height="70%"
-              allowtransparency
-            ></iframe>
 
+      {selectedModel ? (
+        <Split
+          sizes={[65, 35]}
+          style={{ height: `calc(100vh - 2.8rem)` }}
+          direction="vertical"
+        >
+          <Split sizes={[60, 40]} className="flex">
+            <div className="bg-gray-300">
+              <iframe
+                src={`http://${grafanaIP}:3000/d/rYdddlPWk/node-exporter-full?orgId=1&from=now-5m&to=now&kiosk&refresh=5s`}
+                width="100%"
+                height="100%"
+                allowtransparency
+              ></iframe>
+            </div>
+            <div className="bg-gray-300">
+              <iframe
+                src={selectedModel}
+                width="100%"
+                height="100%"
+                allowtransparency
+              ></iframe>
+            </div>
+          </Split>
+          <div className="bg-gray-300">
             <iframe
-              src={selectedModel}
+              src={`http://${WebSSHIP}:2222/ssh/host/${WebSSHIP}`}
+              width="100%"
+              height="100%"
               frameborder="0"
-              width="50%"
-              // height="70%"
-              allowtransparency
+              allowTransparency
             ></iframe>
           </div>
-          <iframe
-            src="http://15.206.164.94:2222/ssh/host/15.206.164.94"
-            frameborder="0"
-            width="100%"
-            height="30%"
-            className="mt-1 hide-scroll"
-            allowTransparency
-          ></iframe>
-        </div>
+        </Split>
       ) : (
         displayModal()
       )}
