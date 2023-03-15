@@ -1,19 +1,19 @@
-const metabaseIP = "43.204.212.97";
-const grafanaIP = "52.66.236.160";
-const WebSSHIP = "3.110.223.13";
+const metabaseIP = "192.168.122.173";
+const grafanaIP = "192.168.122.155";
+const WebSSHIP = "192.168.122.71";
 
 let workloads = {
   ml_optimizations: {
-    xgboost: `http://${metabaseIP}:3000/public/question/d4fc31d2-3f67-4e83-8410-e1aea4b27594`,
+    xgboost: `http://${metabaseIP}:3000/public/question/ec7b1ac1-a8e0-4fdb-82a6-52b345eaac7c`,
     scikit_learn: {
-      elastic_net: `http://${metabaseIP}:3000/public/question/b66501cd-5054-456a-adad-1ce145d615a5`,
-      kmeans: `http://${metabaseIP}:3000/public/question/b999b3fd-d2e5-4613-a0d5-144b734351b2`,
-      knn_mnist: `http://${metabaseIP}:3000/public/question/9e19c0f7-85d8-42aa-a31a-e440c32aa259`,
-      lasso_regression: `http://${metabaseIP}:3000/public/question/9596eb07-4152-480b-a370-8f325ab4c6ba`,
-      linear_regression: `http://${metabaseIP}:3000/public/question/88ba816b-3a8f-4f76-8ad5-ac1f9a6d6bbb`,
-      nusvr: `http://${metabaseIP}:3000/public/question/7f3bd829-e2af-4242-8a9d-bd2793dc068a`,
-      ridge_regression: `http://${metabaseIP}:3000/public/question/315465a6-e17d-4ce9-aa07-b196220b9e27`,
-      svc: `http://${metabaseIP}:3000/public/question/ebc66054-4c97-4783-b489-07b1da68963b`,
+      elastic_net: `http://${metabaseIP}:3000/public/question/3b00e983-8e0e-4f23-bd56-74db6d693cfa`,
+      kmeans: `http://${metabaseIP}:3000/public/question/0974e33e-f394-41e1-bbc0-c7d600a07681`,
+      knn_mnist: `http://${metabaseIP}:3000/public/question/36a9ac72-eb5f-4f96-849c-3da3c2485601`,
+      lasso_regression: `http://${metabaseIP}:3000/public/question/b142f4ee-1dc1-4a47-b1df-7257850a07be`,
+      linear_regression: `http://${metabaseIP}:3000/public/question/c4d1eb76-38bd-4afc-83b6-dd5afcb57448`,
+      nusvr: `http://${metabaseIP}:3000/public/question/0fc739b4-4c96-4e7f-9f50-6a3f3102d9ca`,
+      ridge_regression: `http://${metabaseIP}:3000/public/question/64c3192c-aaa7-40c8-9f42-a3d30ff56aba`,
+      svc: `http://${metabaseIP}:3000/public/question/08a55080-7ef7-4efe-a6a4-9e6cae3418b4`,
     },
   },
 };
