@@ -107,7 +107,7 @@ const Demo = () => {
         <Split sizes={[55, 45]} className="flex">
           <div className="bg-gray-300">
             <iframe
-              src={`http://${grafanaIP}:3000/d/rYdddlPWk/node-exporter-full?orgId=1&from=now-5m&to=now&kiosk&refresh=5s`}
+              src={`http://10.190.181.14:5841/d/rYdddlPWk/node-exporter-full?orgId=1&from=now-5m&to=now&refresh=5s&kiosk`}
               width="100%"
               height="100%"
               allowtransparency
@@ -124,7 +124,7 @@ const Demo = () => {
         </Split>
         <div className="bg-gray-300">
           <iframe
-            src={`http://10.190.181.14:5844/ssh/host/192.168.122.71`}
+            src={`http://10.190.181.14:5843/ssh/host/192.168.122.71`}
             width="100%"
             height="100%"
             frameborder="0"
