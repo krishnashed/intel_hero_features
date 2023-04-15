@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "../Assets/Intel-nav.svg";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -11,6 +12,9 @@ const Header = () => {
             class="self-center font-bold text-xl font-semibold whitespace-nowrap dark:text-white"
           />
         </a>
+        <Link to={"/k8-workloads"}>
+          <p className="underline">Kubernetes Workloads</p>
+        </Link>
       </div>
     </nav>
   );

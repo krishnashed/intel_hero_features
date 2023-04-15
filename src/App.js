@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import "./App.css";
 import Landing from "./Pages/Landing";
 import CategoryOptimizations from "./Pages/CategoryOptimizations";
 import Demo from "./Pages/Demo";
+import K8Workloads from "./Pages/K8Workloads";
 
 const App = () => {
   return (
@@ -14,6 +14,7 @@ const App = () => {
         element={<CategoryOptimizations />}
       />
       <Route path="/:category/demo/:workload" element={<Demo />} />
+      <Route path="/k8-workloads" element={<K8Workloads />} />
     </Routes>
   );
 };

@@ -1,3 +1,16 @@
+import pandas from "./Assets/pandas.png";
+import numpy from "./Assets/numpy.png";
+import scipy from "./Assets/scipy.jpg";
+import numba from "./Assets/numba.png";
+import xgboost from "./Assets/xgboost.png";
+import tflow from "./Assets/tflow.png";
+import pytorch from "./Assets/pytorch.png";
+import sklearn from "./Assets/sklearn.png";
+import openvino from "./Assets/openvino.jpg";
+import intneural from "./Assets/intneural.jpg";
+import modin from "./Assets/modin.jpg";
+import bigDL from "./Assets/bigdl.jpg";
+
 const metabaseIP = "10.190.181.14";
 const grafanaIP = "192.168.122.155";
 const WebSSHIP = "192.168.122.71";
@@ -18,4 +31,77 @@ let workloads = {
   },
 };
 
-export { workloads, metabaseIP, grafanaIP, WebSSHIP };
+let workloadData = [
+  {
+    heading: "ML & DL",
+    data: [
+      {
+        subheading: "Intel Optimized Python",
+        title: "NumPy",
+        src: numpy,
+      },
+      {
+        subheading: "Intel Optimized Python",
+        title: "SciPy",
+        src: scipy,
+      },
+      {
+        subheading: "Intel Optimized Python",
+        title: "Numba",
+        src: numba,
+      },
+      {
+        subheading: "Intel Optimized Python",
+        title: "Pandas",
+        src: pandas,
+      },
+      {
+        subheading: "Intel Optimized Python",
+        title: "Modin",
+        src: modin,
+      },
+      {
+        subheading: "Intel Optimized ML",
+        title: "SciKit Learn",
+        src: sklearn,
+      },
+      {
+        subheading: "Intel Optimized ML",
+        title: "XGBoost",
+        src: xgboost,
+      },
+      {
+        subheading:
+          "Intel Optimized DL Frameworks, DL Optimization Tools, ML/DL OPS Tools",
+        title: "TensorFlow",
+        src: tflow,
+      },
+      {
+        subheading:
+          "Intel Optimized DL Frameworks, DL Optimization Tools, ML/DL OPS Tools",
+        title: "Pytorch",
+        src: pytorch,
+      },
+      {
+        subheading:
+          "Intel Optimized DL Frameworks, DL Optimization Tools, ML/DL OPS Tools",
+        title: "OpenVino",
+        src: openvino,
+      },
+      {
+        subheading:
+          "Intel Optimized DL Frameworks, DL Optimization Tools, ML/DL OPS Tools",
+        title: "Intel Neural Compressor",
+        src: intneural,
+      },
+      {
+        subheading:
+          "Intel Optimized DL Frameworks, DL Optimization Tools, ML/DL OPS Tools",
+        title: "BigDL",
+        src: bigDL,
+      },
+    ],
+  },
+];
+
+export { workloads, metabaseIP, grafanaIP, WebSSHIP, workloadData };
