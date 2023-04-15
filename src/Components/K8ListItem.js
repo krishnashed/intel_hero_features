@@ -38,7 +38,7 @@ const K8ListItem = ({ heading, data }) => {
       <hr className="border-gray-600 mb-4" />
       <div
         className={`overflow-hidden transition-max-height duration-200 ${
-          !isExpanded ? "max-h-screen" : "max-h-0"
+          isExpanded ? "max-h-screen" : "max-h-0"
         }`}
       >
         {Object.entries(groupedData).map(([subheading, images]) => (
