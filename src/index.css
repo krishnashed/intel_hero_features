@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+.QAT-active,
+.DLB-active,
+.ADQ-active,
+.DPDK-active,
+.AVX512-active,
+.DLBoost-active,
+.AMX-active,
+.DSA-active,
+.IAA-active,
+.HBM-active {
+  opacity: 1;
+  outline-width: 2px;
+  outline-style: solid;
+  backdrop-filter: blur(24px);
+  outline-offset: 4px;
+  outline-color: #172554;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-color: #172554;
+}
+
 .gutter {
   background-color: #e5e7eb;
   background-repeat: no-repeat;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 
 const K8CompactListItem = ({ heading, data, showTitle }) => {
   return (
@@ -10,16 +10,14 @@ const K8CompactListItem = ({ heading, data, showTitle }) => {
           <></>
         )}
         <div className="overflow-x-auto my-1 whitespace-nowrap flex justify-evenly">
-          {data.map(({ src, title }, i) => (
+          {data.map(({ src, title, optimizations }, i) => (
             <img
               src={src}
               alt={title}
               title={title}
               className={`rounded-md my-1 mx-2 ${
-                !showTitle
-                  ? "h-16"
-                  : "w-16 h-16 hover:w-18 hover:h-18 hover:opacity-100 hover:outline hover:outline-2 backdrop-blur-xl hover:outline-offset-5 hover:outline-blue-950 hover:shadow-2xl hover:shadow-blue-950 opacity-25 "
-              } `}
+                !showTitle ? "h-16" : "w-16 h-16 opacity-25 "
+              } ${optimizations ? optimizations.join(" ") : ""}`}
               key={i}
             />
           ))}

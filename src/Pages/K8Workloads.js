@@ -22,6 +22,24 @@ const K8Workloads = () => {
     return <div className="flex">{result}</div>;
   };
 
+  const hoverIn = (entity) => {
+    const allWithClass = Array.from(document.getElementsByClassName(entity));
+    console.log(allWithClass);
+
+    allWithClass.forEach((element) => {
+      element.classList.add(`${entity}-active`);
+    });
+  };
+
+  const hoverOut = (entity) => {
+    const allWithClass = Array.from(document.getElementsByClassName(entity));
+    console.log(allWithClass);
+
+    allWithClass.forEach((element) => {
+      element.classList.remove(`${entity}-active`);
+    });
+  };
+
   return (
     <>
       <Header />
@@ -49,7 +67,11 @@ const K8Workloads = () => {
 
         <div className="flex mt-6 mb-2 ml-28">
           {optimizations.map((entity) => (
-            <span className="bg-[#009FE0] text-white text-bold text-2xl mx-4 px-4  h-8	">
+            <span
+              onMouseEnter={() => hoverIn(entity)}
+              onMouseLeave={() => hoverOut(entity)}
+              className={`bg-[#009FE0] text-white text-bold text-2xl mx-4 px-4 h-8`}
+            >
               {entity}
             </span>
           ))}
