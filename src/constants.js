@@ -12,6 +12,8 @@ import modin from "./Assets/modin.jpg";
 import bigDL from "./Assets/bigdl.jpg";
 import huggingFace from "./Assets/hugging_face.svg";
 
+import ipsec from "./Assets/ipsec.png";
+
 import aws_emr from "./Assets/aws_emr.png";
 import dataproc from "./Assets/dataproc.png";
 import snowflake from "./Assets/snowflake.png";
@@ -57,6 +59,27 @@ import debezium from "./Assets/debezium.png";
 import airflow from "./Assets/airflow.png";
 
 import ffmpeg from "./Assets/ffmpeg.png";
+
+import intel_integrated_performance_primitives from "./Assets/intel_integrated_performance_primitives.jpeg";
+import intel_mkl from "./Assets/intel_mkl.jpeg";
+import dpdk from "./Assets/dpdk.png";
+import mpi from "./Assets/mpi.gif";
+import sgx from "./Assets/sgx.png";
+import pmdk from "./Assets/pmdk.png";
+import spdk from "./Assets/spdk.png";
+import opencv from "./Assets/opencv.png";
+
+import intel_silicon_photonics from "./Assets/intel_silicon_photonics.png";
+import intel_ethernet from "./Assets/intel_ethernet.png";
+import barefoot from "./Assets/barefoot.jpeg";
+import intel_xeon from "./Assets/intel_xeon.jpeg";
+import intel_atom from "./Assets/intel_atom.png";
+import intel_stratix from "./Assets/intel_stratix.png";
+import intel_easic from "./Assets/intel_easic.png";
+import intel_iris_xe from "./Assets/iris_xe.png";
+import intel_movidius from "./Assets/intel_movidius.png";
+import intel_habana from "./Assets/intel_habana.png";
+import intel_agilex from "./Assets/intel_agilex.png";
 
 const metabaseIP = "10.190.181.14";
 const grafanaIP = "192.168.122.155";
@@ -179,10 +202,12 @@ let workloadData = [
         {
           title: "Nginx",
           src: nginx,
+          optimizations: ["QAT", "DLB"],
         },
         {
           title: "HAProxy",
           src: haproxy,
+          optimizations: ["QAT", "DLB"],
         },
         {
           title: "NodeJS",
@@ -203,6 +228,13 @@ let workloadData = [
           src: citrix,
         },
       ],
+      Networks: [
+        {
+          title: "IPsec",
+          src: ipsec,
+          optimizations: ["QAT"],
+        },
+      ],
       HPC: [],
     },
   },
@@ -217,6 +249,7 @@ let workloadData = [
         {
           title: "MS SQL",
           src: mssql,
+          optimizations: ["QAT"],
         },
         {
           title: "PostgreSQL",
@@ -243,6 +276,7 @@ let workloadData = [
         {
           title: "RocksDB",
           src: rocksdb,
+          optimizations: ["IAA"],
         },
         {
           title: "Couchbase",
@@ -251,6 +285,7 @@ let workloadData = [
         {
           title: "Clickhouse",
           src: clickhouse,
+          optimizations: ["IAA"],
         },
       ],
       "In Memory": [
@@ -275,6 +310,7 @@ let workloadData = [
         {
           title: "Minio",
           src: minio,
+          optimizations: ["AVX512"],
         },
       ],
     },
@@ -312,6 +348,7 @@ let workloadData = [
         {
           title: "OpenSearch",
           src: opensearch,
+          optimizations: ["QAT"],
         },
         {
           title: "Presto",
@@ -338,4 +375,114 @@ let workloadData = [
   },
 ];
 
-export { workloads, metabaseIP, grafanaIP, WebSSHIP, workloadData };
+let libraries = {
+  heading: "Libraries",
+  data: [
+    {
+      title: "Intel Math Kernel Library",
+      src: intel_mkl,
+    },
+    {
+      title: "Intel Integrated Performance Primitives",
+      src: intel_integrated_performance_primitives,
+    },
+    {
+      title: "Data Plane Development Kit",
+      src: dpdk,
+    },
+    {
+      title: "Message Passing Interface",
+      src: mpi,
+    },
+    {
+      title: "Software Guard Extensions",
+      src: sgx,
+    },
+    {
+      title: "Storage Performance Development Kit",
+      src: spdk,
+    },
+    {
+      title: "Persistent Memory Development Kit",
+      src: pmdk,
+    },
+    {
+      title: "OpenCV",
+      src: opencv,
+    },
+  ],
+};
+
+let optimizations = [
+  "ADQ",
+  "DPDK",
+  "AVX512",
+  "DLBoost",
+  "QAT",
+  "AMX",
+  "DLB",
+  "DSA",
+  "IAA",
+  "HBM",
+];
+
+let silicon = {
+  heading: "Silicon",
+  data: [
+    {
+      title: "Intel® Silicon Photonics",
+      src: intel_silicon_photonics,
+    },
+    {
+      title: "Intel® Ethernet",
+      src: intel_ethernet,
+    },
+    {
+      title: "Barefoot Networks",
+      src: barefoot,
+    },
+    {
+      title: "Intel® Xeon",
+      src: intel_xeon,
+    },
+    {
+      title: "Intel® Atom",
+      src: intel_atom,
+    },
+    {
+      title: "Intel® STRATiX",
+      src: intel_stratix,
+    },
+    {
+      title: "Intel® eASIC",
+      src: intel_easic,
+    },
+    {
+      title: "Intel® Xe",
+      src: intel_iris_xe,
+    },
+    {
+      title: "Intel® Movidius",
+      src: intel_movidius,
+    },
+    {
+      title: "Intel® Habana",
+      src: intel_habana,
+    },
+    {
+      title: "Intel® Agilex",
+      src: intel_agilex,
+    },
+  ],
+};
+
+export {
+  workloads,
+  metabaseIP,
+  grafanaIP,
+  WebSSHIP,
+  workloadData,
+  libraries,
+  optimizations,
+  silicon,
+};
