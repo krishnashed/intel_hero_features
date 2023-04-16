@@ -17,7 +17,7 @@ const App = () => {
       />
       <Route path="/:category/demo/:workload" element={<Demo />} />
       <Route path="/k8-workloads" element={<K8Workloads />} />
-      <Route path="/k8-workloads/rabmq-doc" element={<NginxDoc />} />
+      <Route path="/k8-workloads/nginx-doc" element={<NginxDoc />} />
       <Route path="/k8-workloads/postgres-doc" element={<PostgresDoc />} />
     </Routes>
   );
