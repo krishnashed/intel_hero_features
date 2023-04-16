@@ -203,6 +203,7 @@ let workloadData = [
           title: "Nginx",
           src: nginx,
           optimizations: ["QAT", "DLB"],
+          link: "/k8-workloads/nginx-doc",
         },
         {
           title: "HAProxy",
@@ -254,6 +255,7 @@ let workloadData = [
         {
           title: "PostgreSQL",
           src: postgresql,
+          link: "/k8-workloads/postgres-doc",
         },
         {
           title: "MySQL",
