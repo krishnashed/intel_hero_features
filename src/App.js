@@ -5,6 +5,7 @@ import CategoryOptimizations from "./Pages/CategoryOptimizations";
 import Demo from "./Pages/Demo";
 import K8Workloads from "./Pages/K8Workloads";
 import NginxDoc from "./Pages/NginxDoc";
+import PostgresDoc from "./Pages/PostgresDoc";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Route path="/:category/demo/:workload" element={<Demo />} />
       <Route path="/k8-workloads" element={<K8Workloads />} />
       <Route path="/k8-workloads/rabmq-doc" element={<NginxDoc />} />
+      <Route path="/k8-workloads/postgres-doc" element={<PostgresDoc />} />
     </Routes>
   );
 };
