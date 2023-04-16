@@ -10,6 +10,7 @@ import openvino from "./Assets/openvino.jpg";
 import intneural from "./Assets/intneural.jpg";
 import modin from "./Assets/modin.jpg";
 import bigDL from "./Assets/bigdl.jpg";
+import huggingFace from "./Assets/hugging_face.svg";
 
 const metabaseIP = "10.190.181.14";
 const grafanaIP = "192.168.122.155";
@@ -34,73 +35,129 @@ let workloads = {
 let workloadData = [
   {
     heading: "ML & DL",
-    data: [
-      {
-        subheading: "Intel Optimized Python",
-        title: "NumPy",
-        src: numpy,
-      },
-      {
-        subheading: "Intel Optimized Python",
-        title: "SciPy",
-        src: scipy,
-      },
-      {
-        subheading: "Intel Optimized Python",
-        title: "Numba",
-        src: numba,
-      },
-      {
-        subheading: "Intel Optimized Python",
-        title: "Pandas",
-        src: pandas,
-      },
-      {
-        subheading: "Intel Optimized Python",
-        title: "Modin",
-        src: modin,
-      },
-      {
-        subheading: "Intel Optimized ML",
-        title: "SciKit Learn",
-        src: sklearn,
-      },
-      {
-        subheading: "Intel Optimized ML",
-        title: "XGBoost",
-        src: xgboost,
-      },
-      {
-        subheading:
-          "Intel Optimized DL Frameworks, DL Optimization Tools, ML/DL OPS Tools",
-        title: "TensorFlow",
-        src: tflow,
-      },
-      {
-        subheading:
-          "Intel Optimized DL Frameworks, DL Optimization Tools, ML/DL OPS Tools",
-        title: "Pytorch",
-        src: pytorch,
-      },
-      {
-        subheading:
-          "Intel Optimized DL Frameworks, DL Optimization Tools, ML/DL OPS Tools",
-        title: "OpenVino",
-        src: openvino,
-      },
-      {
-        subheading:
-          "Intel Optimized DL Frameworks, DL Optimization Tools, ML/DL OPS Tools",
-        title: "Intel Neural Compressor",
-        src: intneural,
-      },
-      {
-        subheading:
-          "Intel Optimized DL Frameworks, DL Optimization Tools, ML/DL OPS Tools",
-        title: "BigDL",
-        src: bigDL,
-      },
-    ],
+    data : {
+      "Intel Optimised Python" : [
+        {
+          title: "NumPy",
+          src: numpy,
+        },
+        {
+          title: "SciPy",
+          src: scipy,
+        },
+        {
+          title: "Numba",
+          src: numba,
+        },
+        {
+          title: "Pandas",
+          src: pandas,
+        },
+        {
+          title: "Modin",
+          src: modin,
+        }
+      ],
+      "Intel Optimised ML" : [
+        {
+          title: "SciKit Learn",
+          src: sklearn,
+        },
+        {
+          title: "XGBoost",
+          src: xgboost,
+        }
+      ],
+      "Intel Optimised DL Frameworks & Tools" : [
+        {
+          title: "TensorFlow",
+          src: tflow,
+        },
+        {
+          title: "Pytorch",
+          src: pytorch,
+        },
+        {
+          title: "OpenVino",
+          src: openvino,
+        },
+        {
+          title: "Intel Neural Compressor",
+          src: intneural,
+        },
+        {
+          title: "Hugging Face",
+          src: huggingFace,
+        },
+        {
+          title: "BigDL",
+          src: bigDL,
+        }
+      ]
+    }
+  },
+  {
+    heading: "ML & DL",
+    data : {
+      "Intel Optimised Python" : [
+        {
+          title: "NumPy",
+          src: numpy,
+        },
+        {
+          title: "SciPy",
+          src: scipy,
+        },
+        {
+          title: "Numba",
+          src: numba,
+        },
+        {
+          title: "Pandas",
+          src: pandas,
+        },
+        {
+          title: "Modin",
+          src: modin,
+        }
+      ],
+      "Intel Optimised ML" : [
+        {
+          title: "SciKit Learn",
+          src: sklearn,
+        },
+        {
+          title: "XGBoost",
+          src: xgboost,
+        }
+      ],
+      "Intel Optimised DL Frameworks & Tools" : [
+        {
+          title: "TensorFlow",
+          src: tflow,
+        },
+        {
+          title: "Pytorch",
+          src: pytorch,
+        },
+        {
+          title: "OpenVino",
+          src: openvino,
+        },
+        {
+          title: "Intel Neural Compressor",
+          src: intneural,
+        },
+        {
+          title: "Hugging Face",
+          src: huggingFace,
+        },
+        {
+          title: "BigDL",
+          src: bigDL,
+        }
+      ]
+    }
   },
 ];
 
