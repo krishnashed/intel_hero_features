@@ -16,6 +16,7 @@ spec:
       containers:
         - name: intel-hero-container
           image: akarx/intel-hero:latest
+          imagePullPolicy: "Always"
           ports:
             - containerPort: 3000
 
