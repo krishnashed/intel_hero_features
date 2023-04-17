@@ -44,6 +44,10 @@ import mariadb from "./Assets/mariadb.png";
 import mysql from "./Assets/mysql.png";
 import mssql from "./Assets/mssql.png";
 
+import gramine from "./Assets/gramine.png";
+import fortanix from "./Assets/fortanix.png";
+import ansys from "./Assets/ansys.png";
+
 import longhorn from "./Assets/longhorn.png";
 import minio from "./Assets/minio.png";
 
@@ -163,40 +167,49 @@ let workloadData = [
           src: bigDL,
         },
       ],
-    },
-  },
-  {
-    heading: "ISV/Paas",
-    data: {
-      "Big Data": [
-        {
-          title: "AWS EMR",
-          src: aws_emr,
-        },
-        {
-          title: "Dataproc",
-          src: dataproc,
-        },
-        {
-          title: "Snowflake",
-          src: snowflake,
-        },
-        {
-          title: "Databricks",
-          src: databricks,
-        },
-      ],
       ML: [
         {
           title: "H2o.ai",
           src: h2o,
         },
       ],
-      Security: [],
     },
   },
   {
-    heading: "Workloads",
+    heading: "HPC",
+    data: {
+      Orchestrators: [
+        {
+          title: "Apache Airflow",
+          src: airflow,
+        },
+        {
+          title: "Debezium",
+          src: debezium,
+        },
+      ],
+      HPC: [
+        {
+          title: "Ansys",
+          src: ansys,
+        },
+      ],
+      Security: [
+        {
+          title: "Gramine",
+          src: gramine,
+          optimizations: ["SGX"],
+        },
+        {
+          title: "Fortanix",
+          src: fortanix,
+          optimizations: ["SGX"],
+        },
+      ],
+    },
+  },
+  {
+    heading: "Frontend",
     data: {
       Web: [
         {
@@ -236,11 +249,10 @@ let workloadData = [
           optimizations: ["QAT"],
         },
       ],
-      HPC: [],
     },
   },
   {
-    heading: "Workloads",
+    heading: "Database",
     data: {
       OLTP: [
         {
@@ -318,7 +330,7 @@ let workloadData = [
     },
   },
   {
-    heading: "Workloads",
+    heading: "Data",
     data: {
       Streaming: [
         {
@@ -358,14 +370,22 @@ let workloadData = [
           src: presto,
         },
       ],
-      Orchestrators: [
+      "Big Data": [
         {
-          title: "Apache Airflow",
-          src: airflow,
+          title: "AWS EMR",
+          src: aws_emr,
         },
         {
-          title: "Debezium",
-          src: debezium,
+          title: "Dataproc",
+          src: dataproc,
+        },
+        {
+          title: "Snowflake",
+          src: snowflake,
+        },
+        {
+          title: "Databricks",
+          src: databricks,
         },
       ],
       Media: [
@@ -427,6 +447,7 @@ let optimizations = [
   "DSA",
   "IAA",
   "HBM",
+  "SGX",
 ];
 
 let silicon = {
