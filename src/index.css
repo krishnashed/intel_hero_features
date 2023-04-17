@@ -11,7 +11,8 @@
 .AMX-active,
 .DSA-active,
 .IAA-active,
-.HBM-active {
+.HBM-active,
+.SGX-active {
   opacity: 1;
   outline-width: 2px;
   outline-style: solid;
