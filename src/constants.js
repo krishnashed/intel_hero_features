@@ -192,6 +192,7 @@ let workloadData = [
         {
           title: "Ansys",
           src: ansys,
+          optimizations: ["HBM"],
         },
       ],
       Security: [
