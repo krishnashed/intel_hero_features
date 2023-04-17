@@ -337,6 +337,7 @@ let workloadData = [
         {
           title: "Kafka",
           src: kafka,
+          link: "/k8-workloads/kafka-doc",
         },
         {
           title: "MQTT",
