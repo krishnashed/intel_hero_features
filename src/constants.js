@@ -356,6 +356,7 @@ let workloadData = [
         {
           title: "Spark",
           src: spark,
+          link: "/k8-workloads/spark-doc",
         },
         {
           title: "ElasticSearch",
