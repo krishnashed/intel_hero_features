@@ -13,7 +13,7 @@ const Header = () => {
           />
         </a>
         <Link to={"/k8-workloads"}>
-          <p className="underline">Kubernetes Workloads</p>
+          <p className="underline">Workloads</p>
         </Link>
       </div>
     </nav>

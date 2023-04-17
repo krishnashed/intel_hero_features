@@ -2,14 +2,14 @@ FROM node:18
 
 WORKDIR /app
 
-COPY ./ /app/
-
+COPY package.json /app/
 RUN npm install
+RUN npm install -g serve
+
+COPY ./ /app/
 
 EXPOSE 3000
 
 RUN npm run build
-
-RUN npm install -g serve
 
 CMD ["serve", "-s", "build"]

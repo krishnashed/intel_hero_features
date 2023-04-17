@@ -11,17 +11,31 @@ const K8CompactListItem = ({ heading, data, showTitle }) => {
           <></>
         )}
         <div className="overflow-x-auto my-1 whitespace-nowrap flex justify-evenly">
-          {data.map(({ src, title, optimizations }, i) => (
-            <img
-              src={src}
-              alt={title}
-              title={title}
-              className={`rounded-md my-1 mx-2 ${
-                !showTitle ? "h-16" : "w-16 h-16 opacity-25 "
-              } ${optimizations ? optimizations.join(" ") : ""}`}
-              key={i}
-            />
-          ))}
+          {data.map(({ src, title, optimizations, link }, i) =>
+            link ? (
+              <Link to={link}>
+                <img
+                  src={src}
+                  alt={title}
+                  title={title}
+                  className={`rounded-md my-1 mx-2 ${
+                    !showTitle ? "h-16" : "w-16 h-16 opacity-25 "
+                  } ${optimizations ? optimizations.join(" ") : ""}`}
+                  key={i}
+                />
+              </Link>
+            ) : (
+              <img
+                src={src}
+                alt={title}
+                title={title}
+                className={`rounded-md my-1 mx-2 ${
+                  !showTitle ? "h-16" : "w-16 h-16 opacity-25 "
+                } ${optimizations ? optimizations.join(" ") : ""}`}
+                key={i}
+              />
+            )
+          )}
         </div>
       </div>
     </>
