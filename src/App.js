@@ -6,6 +6,7 @@ import Demo from "./Pages/Demo";
 import K8Workloads from "./Pages/K8Workloads";
 import NginxDoc from "./Pages/NginxDoc";
 import PostgresDoc from "./Pages/PostgresDoc";
+import RabbitMQDoc from "./Pages/RabbitMQDoc";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
       <Route path="/k8-workloads" element={<K8Workloads />} />
       <Route path="/k8-workloads/nginx-doc" element={<NginxDoc />} />
       <Route path="/k8-workloads/postgres-doc" element={<PostgresDoc />} />
+      <Route path="/k8-workloads/rabbit-doc" element={<RabbitMQDoc />} />
     </Routes>
   );
 };

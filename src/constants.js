@@ -332,6 +332,7 @@ let workloadData = [
         {
           title: "RabbitMQ",
           src: rabbitmq,
+          link: "/k8-workloads/rabbit-doc",
         },
         {
           title: "RedPanda",
