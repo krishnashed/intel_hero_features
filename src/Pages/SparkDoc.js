@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../Components/Header";
-import CodeRenderer from "../Components/CodeRenderer";
 import Accordion from "../Components/Accordion";
 import DocLink from "../Components/DocLink";
 

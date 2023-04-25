@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../Components/Header";
 import Accordion from "../Components/Accordion";
-import CodeRenderer from "../Components/CodeRenderer";
 import DocLink from "../Components/DocLink";
 
 const PostgresDoc = () => {
