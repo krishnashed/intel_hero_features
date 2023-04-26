@@ -19,7 +19,7 @@ const K8CompactListItem = ({ heading, data, showTitle }) => {
                   alt={title}
                   title={title}
                   className={`rounded-md my-1 mx-2 ${
-                    !showTitle ? "h-16" : "w-16 h-16 opacity-25 "
+                    !showTitle ? "h-16" : "w-16 h-16"
                   } ${optimizations ? optimizations.join(" ") : ""}`}
                   key={i}
                 />

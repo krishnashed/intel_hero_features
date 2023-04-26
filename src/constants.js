@@ -307,6 +307,7 @@ let workloadData = [
         {
           title: "Redis",
           src: redis,
+          link: "/k8-workloads/redis-doc",
         },
         {
           title: "Aerospike",
@@ -326,6 +327,7 @@ let workloadData = [
           title: "Minio",
           src: minio,
           optimizations: ["AVX512"],
+          link: "/k8-workloads/minio-doc",
         },
       ],
     },

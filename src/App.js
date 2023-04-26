@@ -9,6 +9,8 @@ import PostgresDoc from "./Pages/PostgresDoc";
 import RabbitMQDoc from "./Pages/RabbitMQDoc";
 import SparkDoc from "./Pages/SparkDoc";
 import KafkaDoc from "./Pages/KafkaDoc";
+import RedisDoc from "./Pages/RedisDoc";
+import MinioDoc from "./Pages/MinioDoc";
 
 const App = () => {
   return (
@@ -25,6 +27,8 @@ const App = () => {
       <Route path="/k8-workloads/rabbit-doc" element={<RabbitMQDoc />} />
       <Route path="/k8-workloads/spark-doc" element={<SparkDoc />} />
       <Route path="/k8-workloads/kafka-doc" element={<KafkaDoc />} />
+      <Route path="/k8-workloads/redis-doc" element={<RedisDoc />} />
+      <Route path="/k8-workloads/minio-doc" element={<MinioDoc />} />
     </Routes>
   );
 };
