@@ -136,10 +136,12 @@ let workloadData = [
         {
           title: "SciKit Learn",
           src: sklearn,
+          link: "/k8-workloads/sklearn-doc",
         },
         {
           title: "XGBoost",
           src: xgboost,
+          link: "/k8-workloads/xgboost-doc",
         },
       ],
       "Intel Optimised DL Frameworks & Tools": [
@@ -154,6 +156,7 @@ let workloadData = [
         {
           title: "OpenVino",
           src: openvino,
+          link: "/k8-workloads/openvino-doc",
         },
         {
           title: "Intel Neural Compressor",

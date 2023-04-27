@@ -16,6 +16,8 @@ import Cvat from "./Pages/Cvat";
 import LonghornDoc from "./Pages/LonghornDoc";
 import CassandraDoc from "./Pages/CassandraDoc";
 import MongodbDoc from "./Pages/MongodbDoc";
+import OpenvinoDoc from "./Pages/OpenvinoDoc";
+import ScikitLearnDoc from "./Pages/ScikitLearn";
 
 const App = () => {
   return (
@@ -39,6 +41,8 @@ const App = () => {
       <Route path="/k8-workloads/longhorn-doc" element={<LonghornDoc />} />
       <Route path="/k8-workloads/cassandra-doc" element={<CassandraDoc />} />
       <Route path="/k8-workloads/mongodb-doc" element={<MongodbDoc />} />
+      <Route path="/k8-workloads/openvino-doc" element={<OpenvinoDoc />} />
+      <Route path="/k8-workloads/sklearn-doc" element={<ScikitLearnDoc />} />
     </Routes>
   );
 };
