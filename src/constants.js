@@ -86,6 +86,9 @@ import intel_movidius from "./Assets/intel_movidius.png";
 import intel_habana from "./Assets/intel_habana.png";
 import intel_agilex from "./Assets/intel_agilex.png";
 
+import kvm from "./Assets/KVM-logo.jpg";
+import kubernetes from "./Assets/kubernetes.png";
+
 const metabaseIP = "10.190.181.14";
 const grafanaIP = "192.168.122.155";
 const WebSSHIP = "192.168.122.71";
@@ -409,6 +412,25 @@ let workloadData = [
         {
           title: "FFmpeg",
           src: ffmpeg,
+        },
+      ],
+    },
+  },
+  {
+    heading: "Orchestration",
+    data: {
+      Vitualization: [
+        {
+          title: "KVM",
+          src: kvm,
+          link: "/k8-workloads/kvm-doc",
+        },
+      ],
+      Containerization: [
+        {
+          title: "Kubernetes",
+          src: kubernetes,
+          link: "/k8-workloads/kubernetes-doc",
         },
       ],
     },

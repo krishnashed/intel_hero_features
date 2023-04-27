@@ -19,6 +19,8 @@ import MongodbDoc from "./Pages/MongodbDoc";
 import OpenvinoDoc from "./Pages/OpenvinoDoc";
 import ScikitLearnDoc from "./Pages/ScikitLearn";
 import XGBoostDoc from "./Pages/XGBoost";
+import KVMDoc from "./Pages/KVMDoc";
+import KubernetesDoc from "./Pages/KubernetesDoc";
 
 const App = () => {
   return (
@@ -45,6 +47,8 @@ const App = () => {
       <Route path="/k8-workloads/openvino-doc" element={<OpenvinoDoc />} />
       <Route path="/k8-workloads/sklearn-doc" element={<ScikitLearnDoc />} />
       <Route path="/k8-workloads/xgboost-doc" element={<XGBoostDoc />} />
+      <Route path="/k8-workloads/kvm-doc" element={<KVMDoc />} />
+      <Route path="/k8-workloads/kubernetes-doc" element={<KubernetesDoc />} />
     </Routes>
   );
 };
