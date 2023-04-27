@@ -20,6 +20,7 @@ import snowflake from "./Assets/snowflake.png";
 import databricks from "./Assets/databricks.png";
 
 import h2o from "./Assets/h2o.svg";
+import cvat from "./Assets/cvat.png";
 
 import nginx from "./Assets/nginx.png";
 import haproxy from "./Assets/haproxy.png";
@@ -172,6 +173,11 @@ let workloadData = [
           title: "H2o.ai",
           src: h2o,
         },
+        {
+          title: "CVAT (Computer Vision Annotation Tool)",
+          src: cvat,
+          link: "/k8-workloads/cvat-doc",
+        },
       ],
     },
   },
@@ -283,10 +289,12 @@ let workloadData = [
         {
           title: "Cassandra",
           src: cassandra,
+          link: "/k8-workloads/cassandra-doc",
         },
         {
           title: "MongoDB",
           src: mongodb,
+          link: "/k8-workloads/mongodb-doc",
         },
         {
           title: "RocksDB",
@@ -322,6 +330,7 @@ let workloadData = [
         {
           title: "Longhorn",
           src: longhorn,
+          link: "/k8-workloads/longhorn-doc",
         },
         {
           title: "Minio",

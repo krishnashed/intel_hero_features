@@ -3,6 +3,7 @@ import Header from "../Components/Header";
 import K8ListItem from "../Components/K8ListItem";
 import { workloadData, libraries, optimizations, silicon } from "../constants";
 import K8CompactListItem from "../Components/K8CompactListItem";
+import { Link } from "react-router-dom";
 
 const K8Workloads = () => {
   const displaySubCategory = (workload) => {
@@ -67,13 +68,15 @@ const K8Workloads = () => {
 
         <div className="flex mt-6 mb-2 ml-28">
           {optimizations.map((entity) => (
-            <span
-              onMouseEnter={() => hoverIn(entity)}
-              onMouseLeave={() => hoverOut(entity)}
-              className={`bg-[#009FE0] text-white text-bold text-2xl mx-4 px-4 h-8`}
-            >
-              {entity}
-            </span>
+            <Link to={entity === "QAT" ? "/k8-workloads/qat-doc" : ""}>
+              <span
+                onMouseEnter={() => hoverIn(entity)}
+                onMouseLeave={() => hoverOut(entity)}
+                className={`bg-[#009FE0] text-white text-bold text-2xl mx-4 px-4 h-8`}
+              >
+                {entity}
+              </span>
+            </Link>
           ))}
         </div>
 

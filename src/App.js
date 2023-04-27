@@ -11,6 +11,11 @@ import SparkDoc from "./Pages/SparkDoc";
 import KafkaDoc from "./Pages/KafkaDoc";
 import RedisDoc from "./Pages/RedisDoc";
 import MinioDoc from "./Pages/MinioDoc";
+import QATDoc from "./Pages/QATDoc";
+import Cvat from "./Pages/Cvat";
+import LonghornDoc from "./Pages/LonghornDoc";
+import CassandraDoc from "./Pages/CassandraDoc";
+import MongodbDoc from "./Pages/MongodbDoc";
 
 const App = () => {
   return (
@@ -29,6 +34,11 @@ const App = () => {
       <Route path="/k8-workloads/kafka-doc" element={<KafkaDoc />} />
       <Route path="/k8-workloads/redis-doc" element={<RedisDoc />} />
       <Route path="/k8-workloads/minio-doc" element={<MinioDoc />} />
+      <Route path="/k8-workloads/qat-doc" element={<QATDoc />} />
+      <Route path="/k8-workloads/cvat-doc" element={<Cvat />} />
+      <Route path="/k8-workloads/longhorn-doc" element={<LonghornDoc />} />
+      <Route path="/k8-workloads/cassandra-doc" element={<CassandraDoc />} />
+      <Route path="/k8-workloads/mongodb-doc" element={<MongodbDoc />} />
     </Routes>
   );
 };
