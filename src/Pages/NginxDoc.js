@@ -29,6 +29,12 @@ const NginxDoc = () => {
         <Accordion heading="Accessing the service through HA Proxy">
           <DocLink link="https://github.com/akarX23/k8-deployments/tree/master/ha-nginx-ingress#accessing-the-service-through-ha-proxy" />
         </Accordion>
+        <Accordion heading={"Install NGINX on bare metal"}>
+          <DocLink link="https://github.com/akarX23/intel-scripts/tree/master/nginx" />
+        </Accordion>
+        <Accordion heading={"Optimizing NGINX with Intel QAT"}>
+          <DocLink link="https://github.com/akarX23/intel-scripts/tree/master/QAT-SPR" />
+        </Accordion>
       </div>
     </>
   );
