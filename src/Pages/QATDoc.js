@@ -40,6 +40,13 @@ const QATDoc = () => {
             }
           />
         </Accordion>
+        <Accordion heading={"Benchmark NGINX with wrk"}>
+          <DocLink
+            link={
+              "https://github.com/akarX23/intel-scripts/tree/master/QAT-SPR#benchmarking-process"
+            }
+          />
+        </Accordion>
       </div>
     </>
   );
