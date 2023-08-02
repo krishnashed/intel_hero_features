@@ -21,6 +21,7 @@ import ScikitLearnDoc from "./Pages/ScikitLearn";
 import XGBoostDoc from "./Pages/XGBoost";
 import KVMDoc from "./Pages/KVMDoc";
 import KubernetesDoc from "./Pages/KubernetesDoc";
+import IAADoc from "./Pages/IAADoc";
 
 const App = () => {
   return (
@@ -49,6 +50,7 @@ const App = () => {
       <Route path="/k8-workloads/xgboost-doc" element={<XGBoostDoc />} />
       <Route path="/k8-workloads/kvm-doc" element={<KVMDoc />} />
       <Route path="/k8-workloads/kubernetes-doc" element={<KubernetesDoc />} />
+      <Route path="/k8-workloads/iaa-doc" element={<IAADoc />} />
     </Routes>
   );
 };

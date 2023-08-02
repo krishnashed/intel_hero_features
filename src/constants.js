@@ -476,17 +476,17 @@ let libraries = {
 };
 
 let optimizations = [
-  "ADQ",
-  "DPDK",
-  "AVX512",
-  "DLBoost",
-  "QAT",
-  "AMX",
-  "DLB",
-  "DSA",
-  "IAA",
-  "HBM",
-  "SGX",
+  { value: "ADQ", link: "" },
+  { value: "DPDK", link: "" },
+  { value: "AVX512", link: "" },
+  { value: "DLBoost", link: "" },
+  { value: "QAT", link: "/k8-workloads/qat-doc" },
+  { value: "AMX", link: "" },
+  { value: "DLB", link: "" },
+  { value: "DSA", link: "" },
+  { value: "IAA", link: "/k8-workloads/iaa-doc" },
+  { value: "HBM", link: "" },
+  { value: "SGX", link: "" },
 ];
 
 let silicon = {
