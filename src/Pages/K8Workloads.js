@@ -70,8 +70,8 @@ const K8Workloads = () => {
           {optimizations.map((entity) => (
             <Link to={entity.link}>
               <span
-                onMouseEnter={() => hoverIn(entity)}
-                onMouseLeave={() => hoverOut(entity)}
+                onMouseEnter={() => hoverIn(entity.value)}
+                onMouseLeave={() => hoverOut(entity.value)}
                 className={`bg-[#009FE0] text-white text-bold text-2xl mx-4 px-4 h-8`}
               >
                 {entity.value}
